@@ -68,7 +68,8 @@ public class LoginScreen extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == login) {
             try {
-                if (IRC.login(userText.getText(), new String(passText.getPassword()))) {
+                Main.irc = new IRC();
+                if (Main.irc.login(userText.getText(), new String(passText.getPassword()))) {
                     Window ircGui = new Window();
                     setVisible(false);
                 } else {
