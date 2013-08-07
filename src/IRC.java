@@ -42,7 +42,7 @@ public class IRC implements Runnable {
             out.println(message);
             out.flush();
             connected = true;
-        } else if (temp[0].equals("PART") || temp[0].equals("WHO")) {
+        } else if (temp[0].equals("PART") || temp[0].equals("WHO") || temp[0].equals("NICK") || temp[0].equals("PASS")) {
             out.println(message);
             out.flush();
         } else {
@@ -50,13 +50,6 @@ public class IRC implements Runnable {
             out.flush();
             Window.chat.setText(Window.chat.getText() + "\n" + "You: " + message);
         }
-    }
-
-    public static void connect(String newChannel) {
-        channel = newChannel;
-        out.println("JOIN " + "#" + channel);
-        out.flush();
-        connected = true;
     }
 
     public static void getChat() {
