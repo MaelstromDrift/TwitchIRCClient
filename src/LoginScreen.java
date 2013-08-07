@@ -1,5 +1,4 @@
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -10,7 +9,7 @@ public class LoginScreen extends JFrame implements ActionListener {
     JLabel loginText = new JLabel("Twitch IRC");
     JLabel user = new JLabel("Username: ");
     JLabel pass = new JLabel("Password: ");
-    JLabel incorrect = new JLabel("Incorrest username/password!");
+    JLabel incorrect = new JLabel("Incorrect username/password!");
 
     JTextField userText = new JTextField(1);
     JPasswordField passText = new JPasswordField();
